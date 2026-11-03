@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidz World</title>
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Navbar */
+.navbar {
+    height: 55px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navbar h3 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cart {
+    font-size: 13px;
+}
+
+/* Hero Banner */
+.hero {
+    min-height: 300px;
+    background-color: #ff4263;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 5%;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-text h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.12;
+    margin-bottom: 12px;
+}
+
+.hero-text p {
+    font-size: 12px;
+}
+
+.hero img {
+    width: 52%;
+    height: 260px;
+    object-fit: contain;
+    object-position: center bottom;
+    align-self: flex-end;
+}
+
+/* Product Sections */
+main {
+    padding: 35px 5%;
+}
+
+.products {
+    margin-bottom: 45px;
+}
+
+.products h2 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 22px 16px;
+}
+
+.product {
+    min-width: 0;
+}
+
+.product img {
+    width: 100%;
+    height: 145px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.product h4 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.product p {
+    font-size: 10px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.price span {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.price button {
+    border: none;
+    background-color: #5795ff;
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.price button:hover {
+    background-color: #2874e8;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+
+    .hero {
+        min-height: 260px;
+    }
+
+    .hero img {
+        height: 220px;
+    }
+
+    .product img {
+        height: 170px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .navbar {
+        height: 50px;
+        padding: 0 16px;
+    }
+
+    .navbar h3 {
+        font-size: 15px;
+    }
+
+    .cart {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 220px;
+        padding: 20px 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 27px;
+    }
+
+    .hero img {
+        width: 55%;
+        height: 175px;
+    }
+
+    main {
+        padding: 25px 16px;
+    }
+
+    .products {
+        margin-bottom: 35px;
+    }
+
+    .products h2 {
+        font-size: 17px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 14px;
+    }
+
+    .product img {
+        height: 155px;
+    }
+
+    .product h4 {
+        font-size: 12px;
+    }
+
+    .price span {
+        font-size: 10px;
+    }
+
+    .price button {
+        padding: 5px 8px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h3>KIDZ WORLD</h3>
+        <div class="cart">🛒 Cart Items (0)</div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Shop.<br>Have Fun.<br>Repeat.</h1>
+            <p>#NewAndNow</p>
+        </div>
+        <img src="kw-background.png" alt="Happy children">
+    </section>
+
+    <main>
+
+        <!-- Books -->
+        <section class="products">
+            <h2>Discover New Books</h2>
+
+            <div class="product-grid">
+
+                <article class="product">
+                    <img src="book1.png" alt="This Was Our Pact">
+                    <h4>This Was Our Pact</h4>
+                    <p>Ryan Andrews</p>
+                    <div class="price">
+                        <span>$7.49</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="book2.png" alt="The Famous Five">
+                    <h4>The Famous Five</h4>
+                    <p>Enid Blyton</p>
+                    <div class="price">
+                        <span>$4.59</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="book3.png" alt="Matilda">
+                    <h4>Matilda</h4>
+                    <p>Roald Dahl</p>
+                    <div class="price">
+                        <span>$6.80</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="book4.png" alt="Harry Potter">
+                    <h4>Harry Potter</h4>
+                    <p>J.K. Rowling</p>
+                    <div class="price">
+                        <span>$10.00</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="book5.png" alt="For Young Readers">
+                    <h4>For Young Readers</h4>
+                    <p>Ruskin Bond</p>
+                    <div class="price">
+                        <span>$7.29</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="book6.png" alt="Wimpy Kid">
+                    <h4>Wimpy Kid - DIY</h4>
+                    <p>Jeff Kinney</p>
+                    <div class="price">
+                        <span>$4.99</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Games -->
+        <section class="products">
+            <h2>Discover New Games</h2>
+
+            <div class="product-grid">
+
+                <article class="product">
+                    <img src="dart-board.png" alt="Dart Board">
+                    <h4>Dart Board</h4>
+                    <p>Fun for everyone</p>
+                    <div class="price">
+                        <span>$17.49</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="connect-four.png" alt="Connect Four">
+                    <h4>Connect 4</h4>
+                    <p>Board game</p>
+                    <div class="price">
+                        <span>$19.99</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="jenga.png" alt="Jenga">
+                    <h4>Jenga</h4>
+                    <p>Wooden block game</p>
+                    <div class="price">
+                        <span>$20.99</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="monopoly.png" alt="Monopoly">
+                    <h4>Monopoly</h4>
+                    <p>Family board game</p>
+                    <div class="price">
+                        <span>$19.49</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Handmade Products -->
+        <section class="products">
+            <h2>Handmade with love</h2>
+
+            <div class="product-grid">
+
+                <article class="product">
+                    <img src="bookmarks.png" alt="Bookmarks">
+                    <h4>Bookmarks</h4>
+                    <p>Handmade with love</p>
+                    <div class="price">
+                        <span>$12.49</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="birthday-card.png" alt="Birthday Card">
+                    <h4>Birthday card</h4>
+                    <p>Handmade with love</p>
+                    <div class="price">
+                        <span>$19.99</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="stuffed-toy.png" alt="Stuffed Toys">
+                    <h4>Stuffed toys</h4>
+                    <p>Handmade with love</p>
+                    <div class="price">
+                        <span>$15.99</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="dream-catcher.png" alt="Dream Catcher">
+                    <h4>Dream catcher drawing</h4>
+                    <p>Handmade with love</p>
+                    <div class="price">
+                        <span>$18.49</span>
+                        <button>Add</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
