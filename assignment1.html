@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Wars</title>
+  <style>
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Times New Roman", serif;
+}
+
+.game {
+  display: flex;               
+  justify-content: center;    
+  align-items: flex-start;     
+  gap: 0;
+}
+
+
+.team {
+  display: flex;
+  gap: 12px;                
+  padding: 5px;
+}
+
+
+.card {
+  width: 92px;
+  height: 156px;
+  border: 2px solid #dddddd;  
+  border-radius: 6px;         
+  background-color: white;
+  text-align: center;          
+  padding-top: 8px;
+}
+
+
+.icon {
+  font-size: 58px;
+  height: 70px;
+  line-height: 70px;
+}
+
+.name {
+  font-size: 11px;
+  margin: 6px 6px 0 6px;
+  line-height: 1.2;
+  height: 26px;             
+}
+
+
+.power {
+  font-size: 34px;
+  margin: 4px 0 0 0;
+}
+
+.score {
+  width: 215px;             
+  text-align: center;
+  font-size: 34px;
+  margin-top: 4px;
+}
+  </style>
+</head>
+<body>
+
+  <div class="game">
+
+   
+    <div class="team">
+
+      <div class="card">
+      
+        <div class="icon">🕷️</div>
+        <p class="name">Spiderman</p>
+        <p class="power">12</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👸</div>
+        <p class="name">Wonder<br> Women</p>
+        <p class="power">30</p>
+      </div>
+
+    </div>
+
+    
+    <div class="score">5 - 0</div>
+
+   
+    <div class="team">
+
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <p class="name">Captain<br> America</p>
+        <p class="power">50</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🦸‍♀️</div>
+        <p class="name">Gem Woman</p>
+        <p class="power">12</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
